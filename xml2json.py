@@ -73,7 +73,7 @@ def elem_to_internal(elem,strip=1):
         if text: d["#text"] = text
     else:
         # text is the value if no attributes
-        d = text or None
+        d = text or ""
     return {elem.tag: d}
 
 
