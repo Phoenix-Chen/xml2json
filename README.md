@@ -21,3 +21,24 @@ pip install -r requirements.txt
 ```bash
 ./run-server.sh   # Installs dependencies and spins up the server.
 ```
+
+### Test in local
+1. Run CouchDB:
+```bash
+couchdb```
+2. Run server:
+```bash
+./run-server.sh   # Installs dependencies and spins up the server.
+```
+3. You can use any api testing app. Here, we use Postman:
+
+Post:
+Make post request at:
+```http://localhost:5000/api/save```
+In the Body tab, you can choose to input as raw (xml string) or binary (xml file). Then send. You’ll get a response:
+```{"message": "processing feed"}```
+
+Get:
+Make get request at:
+```http://localhost:5000/api/game/game_id```
+Replace the game_id with the number of game_id 
